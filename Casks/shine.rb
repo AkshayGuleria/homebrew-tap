@@ -7,11 +7,12 @@ cask "shine" do
   desc "Menu-bar utility to temporarily disable keyboard and trackpad for cleaning"
   homepage "https://github.com/AkshayGuleria/Shine"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Shine.app"
 
-  # Ad-hoc signed, not notarized — strips com.apple.quarantine on install
-  # so users don't need the right-click → Open workaround.
-  quarantine false
+  caveats <<~EOS
+    Grant Accessibility permission on first use:
+      System Settings → Privacy & Security → Accessibility → enable Shine
+  EOS
 end
