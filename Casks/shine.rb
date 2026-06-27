@@ -12,6 +12,9 @@ cask "shine" do
   app "Shine.app"
 
   caveats <<~EOS
+    Shine is ad-hoc signed (no Apple notarization). If macOS blocks it:
+      xattr -dr com.apple.quarantine /Applications/Shine.app
+
     Grant Accessibility permission on first use:
       System Settings → Privacy & Security → Accessibility → enable Shine
   EOS
