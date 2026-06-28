@@ -1,6 +1,6 @@
 cask "shine" do
-  version "1.4.2"
-  sha256 "4942dfe19d65aeb5c47bd4e0910948b6a95a4fa5c613904015b9ae0055a03331"
+  version "1.4.3"
+  sha256 "6953b6cfc5e8ef6599c252ada21b69861e204fb3d6d105963076fa501be0d2ed"
 
   url "https://github.com/AkshayGuleria/Shine/releases/download/v#{version}/Shine-v#{version}.zip"
   name "Shine"
